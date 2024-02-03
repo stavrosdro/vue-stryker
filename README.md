@@ -32,3 +32,27 @@ docker start vue-stryker
 ```
 docker stop vue-stryker
 ```
+
+## Tests
+
+_Dev container should be running to run the tests_
+
+### Run tests
+```
+docker exec -it vue-stryker npm run test
+```
+
+### Run tests once
+```
+docker exec -it vue-stryker npm run test:unit
+```
+
+### Run tests with coverage
+```
+docker exec -it vue-stryker npm run test:coverage
+```
+
+### Run mutation tests
+```
+docker exec -it vue-stryker npm run test:mutation
+```

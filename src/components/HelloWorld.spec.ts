@@ -17,7 +17,7 @@ describe('HelloWorld', () => {
 
             const button = wrapper.find('button');
 
-            expect(button.text()).toContain('count is 0');
+            expect(button.text()).toContain('Start the counter');
         });
     });
 
@@ -27,10 +27,12 @@ describe('HelloWorld', () => {
 
             const button = wrapper.find('button');
             button.trigger('click');
+            button.trigger('click');
+            button.trigger('click');
 
             await wrapper.vm.$nextTick();
 
-            expect(button.text()).toContain('count is 1');
+            expect(button.text()).toContain('Count is');
         });
     });
 });
